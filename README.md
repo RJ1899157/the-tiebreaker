@@ -73,9 +73,9 @@ cd the-tiebreaker
 npm install
 
 # 3. Set up your environment variables
-cp .env.example .env.local
-# Add your Gemini API key to .env.local:
-# GEMINI_API_KEY=your_key_here
+cat > .env <<'EOF'
+GEMINI_API_KEY=your_key_here
+EOF
 
 # 4. Start the development server
 npm run dev
@@ -112,7 +112,9 @@ Client (React) → POST /api/analyze → Express Server → Gemini API
 
 ## 📸 Screenshots
 
-> _Add screenshots here after deploying or running locally_
+![The Tiebreaker Dashboard](screenshot.png)
+
+A screenshot from the local app showing the decision analysis dashboard and interactive pros/cons workflow.
 
 ---
 
